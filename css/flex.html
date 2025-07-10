@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .container {
+            margin: 0;
+            padding: 0;
+            background-color: #2c3e50;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            gap: 1rem;
+            /* height: 100vh; */
+            justify-content: space-around;
+            border: 3px solid firebrick;
+        }
+
+        .container > * {
+            flex-shrink: 1;
+            flex-wrap: nowrap;
+            gap: 1rem;
+            color: crimson;
+            border-radius: 20px;
+            justify-content: space-around;
+            flex: 1;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid firebrick;
+            border-radius: 12px;
+            
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 0;
+        }
+
+        .container:nth-child(4) {
+            background: pink;
+            align-self: flex-start;
+            /* align-items: end; */
+        }
+
+        /* @media (min-width : 600px) {
+            .container {
+                flex-direction: row;
+            }
+        } */
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="subContainer1">
+            <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga atque corrupti ut incidunt laudantium accusantium repellendus! Alias nulla, dolorum blanditiis sequi maxime perferendis?</p>
+        </div>
+        <div class="subContainer2">
+            <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, suscipit labore aut neque et eos molestiae tempore ipsum deleniti sapiente quasi consequuntur dolores?</p>
+        </div>
+        <div class="subContainer3">
+            <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor officiis amet soluta non maxime, voluptas reiciendis! Reprehenderit ea, enim dolore quasi quaerat non?</p>
+        </div>
+        <div class="subContainer4">
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere aliquam, tempore laboriosam magni necessitatibus id obcaecati porro cupiditate explicabo a, laborum sit impedit.</p>
+        </div>
+    </div>
+</body>
+</html>

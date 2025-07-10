@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="utility.css">
+</head>
+<body>
+    <!-- <div id="demo">
+        Hello Jithu;
+    </div>
+
+    <div id="demo1">
+        <span>Content Here</span>
+    </div> -->
+
+    <!-- <button id="btn" onclick="document.getElementById('demo').style.fontSize = '50px', document.getElementById('demo').style.color = 'Red'">click me</button> -->
+
+    <!-- <button id="btn1" onclick="document.getElementById('demo1').style.display='none'" >click me to hide Content</button> -->
+
+    <!-- <button id="btn2" onclick="document.getElementById('demo1').style.display='Inline-Block'">Click Here to show content</button> -->
+
+    <!-- <button id="btn3" onclick="document.getElementById('demo1').innerHTML='Content Restored'">Su    bmit</button>-->
+
+    <!-- <button id="mybtn">Click Me</button>
+    <button id="mybtn1">Click Here</button>
+
+    <hr>
+    <button id="togglebtn">Show/Hide</button>
+    <p id="text">this is a toggle able paragraph.</p>
+
+    <hr>
+    <button id="btn2">click me</button>
+
+    <p id="txt">this is a para tag</p>
+
+    <script src="script.js"></script>
+
+    <button type="button" onclick="document.write('Jithu')">Click me</button> -->
+
+   
+    
+    <div class="container">
+        <div class="sidebar">
+            <button onclick="toggleSidebar()">X</button>
+            <header>
+                <nav class="flex justify-between">
+                    <div class="flex items-center font-bold text-green space"><u>Landing Page</u></div>
+                    <ul class="navbar flex items-center">
+                        <li><a href="#index.html">About</a></li>
+                        <li><a href="#sample.html">Contact-us</a></li>
+                        <li><a href="#header.html">Gallery</a></li>
+                        <li><a href="#footer.html">Footer</a></li>    
+                    </ul>
+                </nav>
+                <!-- <hr> -->
+            </header>
+        </div>
+        <div class="subcontainer">
+            <main class="min-h bg-color">
+            <section>
+                 <div class="flex" id="index.html">
+                    <div class="topleft flex items-center justify-center flex-col px-2">
+                        <h3>Redirected to About section in the same page</h3>
+                        <h3 class="my-1">This is the placeholder to store main content</h3>
+                        <fieldset>
+                            <legend><u>This is a Group of HTML Elements grouped within a border.</u></legend>    
+                            
+                            <p>This is a paragraph tag, This shows content as paragraph.</p>
+                            <p>Paragraph tag is a Block level tag.</p>
+                            <br> <!-- This adds one line break in between the contents.  -->
+                            <hr> <!-- this adds a Horizontal line in between the texts. -->                      
+                        </fieldset>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section>
+                 <div class="flex" id="sample.html">
+                    <div class="topleft flex items-center justify-center flex-col px-2">
+                        <h3>Redirected to Contact-us section in the same page</h3>
+                        <h3 class="my-2">This is the placeholder to store main content</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem, necessitatibus quod officiis     quaerat accusamus alias fuga voluptates harum at rerum aut totam. Odio asperiores, repellendus illo vitae labore molestiae!</p>
+                    </div>
+                </div>
+            </section>
+            <hr>
+               <section>
+                 <div class="flex" id="header.html">
+                    <div class="topleft flex items-center justify-center flex-col px-2">
+                        <h3>Redirected to Gallery section in the same page</h3>
+                        <h3 class="my-3">This is the placeholder to store main content</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem, necessitatibus quod officiis     quaerat accusamus alias fuga voluptates harum at rerum aut totam. Odio asperiores, repellendus illo vitae labore molestiae!</p>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <fieldset>
+                <legend>These are Semantic tags</legend>
+                    <article>
+                        <header>
+                            <h2>Blog Title</h2>
+                            <p>By Author</p>
+                        </header>
+                        <section>
+                            <p>Blog content goes here...</p>
+                        </section>
+                        <footer>
+                            
+                        </footer>
+                    </article>
+                </fieldset>        
+                <br>
+            </main>
+            <footer>
+                <nav class="min-j" id="footer.html">
+                    <h3>Redirected to Footer section in the same page</h3>
+                    <h3>Footer Goes here</h3>
+                    <p>This is a paragraph content</p>
+                    <h1>This is H1 Tag</h1>
+                    <h2>This is H2 Tag</h2>
+                    <h3>This is H3 Tag</h3>
+                    <h4>This is H4 tag</h4>
+                    <h5>This is h5 Tag</h5>
+                    <hr>
+                    <p>Published on: <time datetime="2025-07-01">July 1, 2025</time></p>
+                    <ul class="navbar1">
+                        <li><a href="privacy-policy.html">privacy-policy</a></li>
+                        <li><a href="terms.html">terms-and-conditons</a></li>
+                    </ul>
+                </nav>
+            </footer>
+        </div>
+    </div>
+
+
+
+    <!-- <script>
+        
+        const btn = document.getElementById("togglebtn");
+        const text = document.getElementById("text");
+
+        btn.onclick = function() {
+            if(text.style.display === "none") {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        };
+
+        document.getElementById('demo').innerHTML="Hello Javascript";
+    </script> -->
+
+    <script>
+        // document.addEventListener('DOMContentLoaded', () => {
+        // const sidebar = document.querySelector('.sidebar');
+        // const toggleButton = document.querySelector('.toggle-sidebar');
+
+        // toggleButton.addEventListener('click', () => {
+        // sidebar.classList.toggle('collapsed');
+        //      });
+        // });
+
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('collapsed');
+
+        }
+
+    </script>
+</body>
+</html>
