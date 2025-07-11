@@ -70,4 +70,11 @@ git revert commit -> revert a specific commit by creating a new one
 // i am experimenting with this line, now i will switch between main and branch-1 to check if this line exists or not 
 this line exists only on main branch
 
+
+// i am experimenting with this line, now i will switch between main and branch-1 to check if this line exists or not 
+this line exists only on main branch
+
+
+now i am going to merge a pull request
+
        
