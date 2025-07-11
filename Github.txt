@@ -65,3 +65,5 @@ git reset --hard -> reset working directory and index to last commit (irreversib
 
 git revert commit -> revert a specific commit by creating a new one
 
+these above lines will be only visible for branch-1 and not be visible for main branch 
+
