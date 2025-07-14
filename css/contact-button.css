@@ -14,7 +14,7 @@
 }
 
 .subContainer1 {
-    background-color: #2c3ef0;
+    background-color: #c8cbe9;
     color: white;
     display: flex;
     width: 100px;
@@ -29,5 +29,9 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    text-transform: capitalize; /* Text-transform provides styling to the text, it can transform the given text to lowercase, uppercase and capitalize only the first letter of the word. */
+    /* letter-spacing: 1px; /* Letter spacing adds space between the letters. */
+    box-shadow: 2px 2px 2px rgb(0, 0, 255);
+    
 }
 
