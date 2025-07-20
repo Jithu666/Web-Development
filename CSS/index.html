@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      strong {
+        background-color: #2c3e50;
+        color: white;
+        text-align: center;
+      }
+
+      #hrx {
+        border-radius: 20px;
+        border: 2px solid black;
+      }
+
+      form {
+        margin: 0;
+        padding: 20px;
+        background-color: cornsilk;
+        color: black;
+      }
+
+      a {
+        cursor: pointer;
+        background-color: red;
+        color: white;
+        margin-right: 12px;
+      }
+
+      a:hover {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <strong>Contact Form</strong>
+    <form onsubmit="handleEvent(event)" method="post">
+      <br />
+      <br />
+      <img
+        src="Hrithik-Roshan-in-WAR.jpg"
+        alt="Hrithik Roshan From War movie"
+        width="100px"
+        height="100px"
+        id="hrx"
+      />
+      <br /><br />
+      <label for="name">Name:</label>
+      <input type="text" id="name" password="name" /> <br />
+      <br />
+      <label for="bio">Bio:</label>
+      <input type="text" id="bio" label="bio" /> <br />
+      <br />
+      <a href="https://www.google.com">google</a>
+      <button type="submit" value="submit">contact us</button>
+    </form>
+
+    <script>
+      function handleEvent(event) {
+        console.log("Form Submitted");
+        event.preventDefault();
+
+        const formData = {};
+
+        formData.img = document.getElementById("hrx").value;
+        formData.name = document.getElementById("name").value;
+        formData.bio = document.getElementById("bio").value;
+
+        console.log("Image: ", formData.img);
+        console.log("Name: ", formData.name);
+        console.log("Bio:", formData.bio);
+      }
+    </script>
+  </body>
+</html>
