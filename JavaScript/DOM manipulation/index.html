@@ -1,0 +1,157 @@
+<!-- Window is the global object, which has higher priority than all other local and global variables and objects in the window or DOM tree, so window objects and window methods and properties can be accessed from anywhere in the hierarchy. -->
+
+<!-- Methods of window object are:-
+        window.open() :- opens a new window.
+        window.close() :- closes the current window.-->
+
+<!-- By using the window object, we can create and maintain the visible browser and its contents.
+This window object is been created by the browser. -->
+
+<!-- Console.log also lies inside window object.-->
+
+<!-- the entire window can be accessed by calling the document's properties. -->
+
+<!-- **To Access the content we use** -->
+
+<!-- 1. document.getElementById() => "We pass the element's id, so we can access the content associated with that element.
+2. document.getElementByClassName() => "We pass the element's class Name, so we can access all the content associated with that class.
+3. document.getElementByTagName() => "We pass the element's tag name, so we can access the content associated with the tag.
+4. document.querySelector() => "QuerySelector takes 'ID', 'Name' and 'TagName' and returns the matching content, it returns only the content from one element. even if there are multiple matching contents." -->
+
+<!-- **To Update the content we use** -->
+
+<!-- innerHTML -->
+<!-- OuterHTML -->
+<!-- innerText -->
+<!-- text-Content -->
+
+<!-- **TO Insert the content we 
+ 1. first nedd to create the element of a desired tag
+ 2. add content to the element
+ 3. insert the element in our interested position by mentioning, 1 out of 4 attributes. i.e. 
+    beforebegin
+    afterbegin
+    beforeend
+    afterend** -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <pre id="paraContent" class="pContent">This is pre tag.</pre>
+
+      <p id="paraContent1" class="pContent">Hello .</p>
+
+      <!-- <p id="p">This is the second p tag</p> -->
+
+      <!-- <button id="myBtn">click here</button> -->
+    </div>
+
+    <script>
+      // DOM Manipulation to Access content.
+      // Access elements by Id.
+      const id = document.getElementById("paraContent");
+      const id1 = document.getElementById("paraContent1");
+
+      // console.log(id);
+      // console.log(id1);
+
+      // Access elements by Class Name.
+      const className = document.getElementsByClassName("pContent");
+
+      // console.log(className);
+
+      // Access elements by Tag Name.
+      const tagName = document.getElementsByTagName("pre");
+      const tagName1 = document.getElementsByTagName("p");
+
+      // console.log(tagName);
+      // console.log(tagName1);
+
+      // Accessing elements by using querySelector to find the first element with the specified token(id, className, tagName).
+      const querySelector = document.querySelector(".pContent");
+
+      // console.log(querySelector);
+
+      // Accessing elements by using querySelectorAll to find the first element with the specified token(id, className, tagName).
+      const querySelectorAll = document.querySelectorAll(".pContent");
+
+      // console.log(querySelectorAll);
+
+      // DOM Manipulation to Update content.
+
+      // Update content by using InnerText.
+      // document.getElementById("paraContent").innerText = "Updated content from DOM";
+
+      // Update content by using innerHTML
+      // document.getElementById("paraContent1").innerHTML = "Updated content from DOM by using innerHTML";
+
+      // Update content by using outerHTML
+      // document.getElementById("myBtn").outerHTML = "Updated content from DOM by using outerHTML";
+
+      // Update content by using text-Content
+      // document.getElementById("p").textContent = "Updated content from DOM by using text-content";
+
+      // Insert content through Dom Manipulation.
+
+      // .appendChild() :- inserts the newchild element at the bottom of the section
+
+      // Create
+      const newPara = document.createElement("h1");
+
+      // Add Content
+      newPara.innerHTML = "Heading 1";
+
+      // Insert
+      document.getElementById("paraContent").appendChild(newPara);
+
+      // using insertAdjacentElement => we can insert the content in four positions
+      /*
+        beforebegin
+        afterbegin
+        beforeend
+        afterend
+        */
+
+      // Create
+      const newButton = document.createElement("button");
+
+      // Add content
+      newButton.innerHTML = "Submit";
+
+      // Insert
+      // document.getElementById('paraContent').insertAdjacentElement('beforebegin', newButton);
+
+      // document.getElementById('paraContent1').insertAdjacentElement('afterbegin', newButton);
+
+      // document.getElementById('p').insertAdjacentElement('beforeend', newButton);
+
+      // document.getElementById('myBtn').insertAdjacentElement('afterend', newButton);
+
+      // Inserting element by using insertAdjacentElement at position -> beforebegin
+      // create
+      const newHeading = document.createElement("h4");
+      const newHeading1 = document.createElement("h3");
+      const newHeading2 = document.createElement("h2");
+      const newHeading3 = document.createElement("h1");
+
+      // Add Content
+      newHeading3.innerHTML = "Heading 1";
+      newHeading2.innerHTML = "Heading 2, attribute -> afterbegin";
+      newHeading1.innerHTML = "JS";
+      newHeading.innerHTML =
+        "Heading 4,  attribute -> afterend,    id -> paraContnet1";
+
+      // insert content
+      // document.getElementById('paraContent').insertAdjacentElement('beforebegin', newHeading3);
+      // document.getElementById('paraContent').insertAdjacentElement('afterbegin', newHeading2);
+      // document.getElementById('paraContent1').insertAdjacentHTML('beforeend', "<p>JS</p>");
+      // document.getElementById('paraContent1').insertAdjacentElement('afterend', newHeading);
+    </script>
+  </body>
+</html>
