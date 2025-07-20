@@ -1,4 +1,0 @@
-this is a new file just to show to delete files from remote repository using 
-git rm --cached <filename>
-
-git rm --cached temp.txt
