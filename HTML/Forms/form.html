@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <p class="form-name">User Input Form</p>
+        <hr>
+    </div>
+
+    <!-- Form 1 -->
+
+    <!-- <form id="myForm" action="handleForm(event)" method="post">
+        <label for="name">Enter Name:</label>
+        <input type="text" id="name" class="name">
+        <br> <br>
+
+        <label for="mail">Enter Email:</label>
+        <input type="email" id="mail" class="mail">
+        <br> <br>
+
+        <label for="age">Enter Age:</label>
+        <input type="number" id="age" name="age">
+        <br> <br>
+
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender">
+            <option value="">Select One</option>
+            <option value="Male">Male</option>
+            <option value="FeMale">FeMale</option>
+        </select>
+        <br> <br>
+
+        <button id="btn" type="submit">submit</button>
+    </form> -->
+
+
+    <!-- Form 2 -->
+    <!-- <h2>Contact Form</h2>
+    <form onsubmit="handleForm(event)" method="post">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <br> <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+
+        <button type="submit">submmit</button>
+    </form>
+
+    <p id="displayArea"></p> -->
+
+    <!-- Form 3 -->
+    <!-- <h3>Form Submission</h3>
+    <form id="myForm" onsubmit="handleForm(event)" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+        <br>
+        <label for="passwd">Password:</label>
+        <input type="password" name="" id="passwd">
+        <br>
+        <button id="mybtn" type="submit">Login</button>
+    </form> -->
+
+    <!-- Form 4 -->
+    <!-- <form id="myForm" onsubmit="handleForm(event)" method="post">
+        <label for="email">Enter Email:</label>
+        <input type="email" id="email" required> <br> <br>
+
+        <button type="submit" value="submit">Login</button>
+    </form> -->
+
+    <!-- Form 5 -->
+    <!-- <form id="myForm">
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email">
+        <br>
+        <button type="submit">Login</button>
+    </form> -->
+    
+
+    <!-- Form 6 -->
+    <!-- <form id="myForm">
+        <input type="email" id="mail"> <br> <br>
+        <input type="password" id="password"> <br> <br>
+        <button type="submit">submit</button>
+    </form> -->
+
+    <!-- Form 7 -->
+    <form id="myForm">
+        <input type="text" id="name"> <br>
+        <input type="text" id="age"> <br>
+        <button type="submit" value="submit">Submit</button>
+    </form> 
+
+    <script>
+
+        // Form 7
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById("myForm")
+            
+            form.addEventListener("submit", function(event) {
+                event.preventDefault(); 
+                let name = document.getElementById("name").value;
+                let age = document.getElementById("age").value;
+
+
+                console.log(name);
+                console.log(age);
+            
+                alert(`Name: ${name}, Age: ${age}`);
+            });          
+        });
+      
+
+        // Form 6
+        // const form = document.getElementById('myForm');
+
+        // form.addEventListener('submit', function(e) {
+        //     console.log("Form Submitted")
+        //     e.preventDefault();
+
+        //     const email = form.mail.value.trim();
+        //     const password = form.password.value.trim();
+
+        //     if(!email || !password){
+        //         alert("Both Fields are Required");
+        //         return;
+        //     } 
+
+        //     console.log('Email:', email);
+        //     console.log('Password:', password);
+        // });
+
+
+        // Form 5
+        // document.getElementById("myForm").addEventListener("submit", function(e) {
+        //     e.preventDefault();
+        //     console.log("Form Submitted");
+
+        //     const email = document.getElementById('email').value;
+        //     if(email.includes("@")){
+        //         console.log("Form Submitted with Email address ", email);
+        //     } else {
+        //         alert("Invalid E-mail");
+        //     }
+        // });
+
+
+        // Form 4
+        // function handleForm(event){
+        //     console.log("Form Submitted");
+        //     event.preventDefault();
+
+        //     let form = document.getElementById("myForm");
+
+        //     let email = document.getElementById("email").value;
+        //     console.log("Email: ", email);
+
+        //     form.reset();
+        // }
+
+
+        // Form 3
+        // function handleForm(event) {
+        //     console.log("Form Submitted");
+        //     event.preventDefault();
+
+        //     let form = {};
+
+        //     let email = document.getElementById("email").value;
+        //     let passwd = document.getElementById("passwd").value;
+
+        //     console.log("Email: ", email);            
+        //     console.log("Password", passwd);
+        // }
+
+
+        // Form 2
+        // function handleForm(event) {
+        //     console.log('Form Submitted');
+        //     event.preventDefault();
+            
+        //     let formData = {};
+            
+        //     formData.name = document.getElementById('name').value;
+        //     formData.email = document.getElementById('email').value;
+
+        //     console.log(formData);
+        //     console.log(`Name: ${formData.name}, Email: ${formData.email}`);
+        // }
+
+
+        // Form 1
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     const form = document.getElementById('myForm');
+
+        //     form.addEventListener('submit', function(event) {
+        //         event.preventDefault();
+
+        //         const name = document.getElementById('name').value;
+        //         const e_mail = document.getElementById('mail').value;
+        //         const age = document.getElementById('age').value;
+        //         const gender = document.getElementById('gender').value;
+
+        //         console.log("Name:", name);
+        //         console.log("E-mail:", e_mail);
+        //         console.log("Age:", age);
+        //         console.log("Gender:", gender)
+
+        //         alert(`Name: ${name},  Email: ${e_mail}, Age: ${age}, Gender: ${gender}`);
+
+        //         form.reset();
+        //     })
+        // })
+    </script>
+
+</body>
+</html>
