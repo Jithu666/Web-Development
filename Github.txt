@@ -59,13 +59,11 @@ git pull -> fetch and merge from remote repository
 
 // Undoing changes
 git restore <file> -> undo changes in working directory.
-git reset <file> => usntage a file
+git reset <file> => unstage a file
 
 git reset --hard -> reset working directory and index to last commit (irreversible)
 
 git revert commit -> revert a specific commit by creating a new one
-
-
 
 // i am experimenting with this line, now i will switch between main and branch-1 to check if this line exists or not 
 this line exists only on main branch
