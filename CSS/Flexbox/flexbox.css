@@ -1,0 +1,161 @@
+.container {
+    display: flex;
+
+    /* flex-direction: row; */
+    /* By default; flex-direction will be set to row. */
+
+    /* flex-direction: row-reverse; */
+    /* sets the content from the right end of the container in the reverse order. */
+
+    /* flex-direction: column; */
+    /* to set the elements in column we can use flex direction to be column. */
+
+    /* flex-direction: column-reverse; */
+    /* to set the elements in column in the reverse order, we can use flex direction to be column-reverse. */
+
+    /* Justify-Content:- Aligns Items across the main axis */
+
+    /* Justify Content :- Justify content sets the alignment on the horizontal axis (main axis). */
+
+    justify-content: flex-start;
+    /* aligns the items from the left end of the container. */
+
+    /* justify-content: flex-end; */
+    /* aligns the items from the right end of the container. */
+
+    /* justify-content: center; */
+    /* aligns the items at the center of the container. */
+
+    /* justify-content: space-between; */
+    /* aligns the items with equal space distribution among the elements (The area outside the elements is also included in space around). */
+
+    /* justify-content: space-around; */
+    /* aligns the items with even space distribution around on both the sides of the elements. */
+
+    /* justify-content: space-evenly; */
+    /* aligns the items with even space distribution among the elements. */
+
+    border: 10px solid black;
+    height: 90vh;
+
+    /* Align-Items:- Aligns Items across the cross axis */
+
+    align-items: flex-start;
+    /* Default is flex-start. */
+
+    /* align-items: flex-end; */
+    /* Vertically aligns the items in the bottom of the container. */
+
+    /* align-items: center; */
+    /* Vertically aligns the items in the center of the cross-axis/vertically align's the items in the center of the container. */
+
+    /* align-items: baseline; */
+    /* Aligns the items with the rest of the characters in the same line. for example like -> - - - -  */
+
+    /* align-items: first baseline; */
+    /* Aligns the items with the rest of the characters in the same line along the top with flex-start. */
+
+    /* align-items: last baseline; */
+    /* Aligns the items with the rest of the characters in the same line along the top with flex-end. */
+
+    /* align-items: end; */
+    /* Vertically aligns the items in the bottom of the container. */
+
+    /* align-items: start; */
+    /* Vertically aligns the items at the top of the container. */
+
+    /* align-items: self-start; */
+    /* Vertically aligns the items in the start of the container by assigning the properties to inner child. */
+
+    /* align-items: self-end; */
+    /* Vertically aligns the items in the end of the container. */
+
+
+    /* Applies the Flex-wrap property */
+
+    /* flex-wrap: nowrap; */
+    /* Default flex-wrap property is nowrap */
+
+    /* flex-wrap: wrap-reverse; */
+    /* wraps the contents in the reverse order from flex-end. */
+
+    /* flex-wrap: nowrap; */
+    /* Default flex-wrap property is nowrap */
+
+    /* flex wrap can be used along with another property, align-content */
+    flex-wrap: wrap;
+    /* align-content: center; */
+    /* Aligns the content in the center on cross axis */
+
+    /* Align content can be used to give both vertical and horizontal instructions like, cross axis and main axis on where to place the elements. */
+
+    /* align-content: flex-start; */
+    /* Aligns the content in the flex-start position on cross axis */
+
+    /* align-content: flex-end; */
+    /* Aligns the content in the flex-start position on cross axis */
+
+    /* align-content: space-around; */
+    /* Aligns the content in the space-around between the elements on the main axis */
+
+    /* align-content: space-evenly; */
+    /* Aligns the content in the space-evenly between the elements on the main axis */
+
+    /* align-content: space-between; */
+    /* Aligns the content in the space-between between the elements on the main axis */
+
+    /* We can add gap between the row's and column's using row-gap & column-gap attributes */
+    row-gap: 1em;
+    column-gap: 1em;
+
+}
+
+.box {
+    width: 110px;
+    height: 110px;
+    font-size: 6em;
+    border-radius: 15px;
+    margin-left: 6px;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+#box1 {
+    /* font-size: 3em; */
+    background-color: hsl(0, 100%, 62%);
+
+    /* To give positioning to each individual child inside a container, we can use align-self attribute. */
+    /* Align-self does not work when Align-content attribute has been used. */
+
+    /* align-self: center; */
+    /* align-self: center -> aligns the child element in the center of the cross axis. */
+
+}
+
+#box2 {
+    /* align-self: flex-end; */
+    /* align-self: flex-end -> aligns the child element in the end of the cross axis. */
+
+    background-color: hsl(209, 66%, 57%);
+
+    /* Order property can be used to position the element either in the beginning or ending of the container across main axis */
+    order: -1;
+    /* order: -1 -> sets the element in the beginning of the container, with other child elements  */
+}
+
+#box3 {
+    /* align-self: flex-start; */
+    /* align-self: flex-start -> aligns the child element in the start/begining of the cross axis. */
+    background-color: hsl(134, 100%, 51%);
+}
+
+#box4 {
+    /* align-self: center; */
+    /* align-self: center -> aligns the child element in the center of the cross axis. */
+
+    background-color: hsl(59, 100%, 51%);
+
+    order: -2;
+    /* order: -1 -> sets the element in the beginning of the container, with other child elements  */
+    /* higher the negative value, higher the priority among other child elements. */
+}
