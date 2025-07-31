@@ -93,4 +93,34 @@ async function doChores() {
   }
 }
 
-doChores();
+// doChores();
+
+// Async await
+
+// let url = "https://jsonplaceholder.typicode.com/users/";
+// let url1 = "https://dummyjson.com/test";
+let url2 = "https://dummyjson.com/ip";
+
+async function getUserInfo() {
+  try {
+    const response = await fetch(url2);
+    const data = await response.json();
+
+    // For URL
+    // data.forEach((element) => {
+    //   console.log(element.id);
+    //   console.log(element.name);
+    //   console.log(element.address);
+    //   console.log(element.company.bs);
+    // });
+
+    // For url1
+    // console.log(data);
+
+    // For Url2
+    // console.log(data.ip);
+  } catch (error) {
+    console.log(error);
+  }
+}
+getUserInfo();
