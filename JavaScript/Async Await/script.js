@@ -97,30 +97,38 @@ async function doChores() {
 
 // Async await
 
-// let url = "https://jsonplaceholder.typicode.com/users/";
+// Fetch Api's
+// Example 1:
+let url = "https://jsonplaceholder.typicode.com/users/";
 // let url1 = "https://dummyjson.com/test";
-let url2 = "https://dummyjson.com/ip";
+// let url2 = "https://dummyjson.com/ip";
 
-async function getUserInfo() {
-  try {
-    const response = await fetch(url2);
-    const data = await response.json();
+// async function getUserInfo() {
+//   try {
+//     const response = await fetch(url);
+//     const data = await response.json();
 
-    // For URL
-    // data.forEach((element) => {
-    //   console.log(element.id);
-    //   console.log(element.name);
-    //   console.log(element.address);
-    //   console.log(element.company.bs);
-    // });
+//     // For URL
+//     // data.forEach((element) => {
+//     //   console.log(element.id);
+//     //   console.log(element.name);
+//     //   console.log(element.address);
+//     //   console.log(element.company.bs);
+//     // });
 
-    // For url1
-    // console.log(data);
+//     data.forEach((user) => {
+//       console.log(
+//         `Id: ${user.id}, Name: ${user.name}, UserName: ${user.username}, E-Mail: ${user.email}`
+//       );
+//     });
 
-    // For Url2
-    // console.log(data.ip);
-  } catch (error) {
-    console.log(error);
-  }
-}
-getUserInfo();
+//     // For url1
+//     // console.log(data);
+
+//     // For Url2
+//     // console.log(data.ip);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+// getUserInfo();
