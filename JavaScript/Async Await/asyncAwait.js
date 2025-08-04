@@ -113,3 +113,33 @@
 //     console.log(error);
 //   }
 // }
+
+// Callbacks
+// getUserData(getStudentsData);
+// Fetch user Data using Async await.
+// async function getUserData(callback) {
+//   const url = "https://hp-api.onrender.com/api/characters"; // Harry potter Characters.
+//   const response = await fetch(url);
+//   const data = await response.json();
+
+//   // console.log(data[0]);
+//   // console.log("Data object 1 starts from here:");
+//   // console.log(data[1]);
+
+//   console.log("Characters Data Length:- ", data.length);
+//   for (let i = 0; i < data.length && i < 6; i++) {
+//     console.log(data[i].name);
+//   }
+//   console.log("Callback function to be executed");
+//   callback();
+// }
+
+// async function getStudentsData() {
+//   const url1 = "https://hp-api.onrender.com/api/characters/students"; // Harry potter Students.
+//   const response = await fetch(url1);
+//   const studentsData = await response.json();
+//   console.log("Students Data Length:- ", studentsData.length);
+//   for (let i = 0; i < studentsData.length && i < 6; i++) {
+//     console.log(studentsData[i].name);
+//   }
+// }
