@@ -143,3 +143,175 @@
 //     console.log(studentsData[i].name);
 //   }
 // }
+
+// Harry-Potter API
+getHarryPotterCharacters();
+// Fetch Harry Potter Character's
+async function getHarryPotterCharacters() {
+  const url = "https://hp-api.onrender.com/api/characters";
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    // console.log(response);
+    const data = await response.json();
+    // console.log(data);
+    console.log("Character's from Harry Potter:");
+    data.slice(0, 6).forEach((element) => {
+      console.log(element.name);
+    });
+    console.log("");
+    await getHarryPotterStudentCharacters();
+  } catch (error) {
+    console.log(error);
+    await getHarryPotterStudentCharacters();
+  }
+}
+
+// Fetch Harry Potter Student Character's
+async function getHarryPotterStudentCharacters() {
+  const url = "https://hp-api.onrender.com/api/characters/students";
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json();
+    // console.log(data);
+    console.log("Student Character's from Harry Potter:");
+    data.slice(0, 6).forEach((element) => {
+      console.log(element.name);
+    });
+    console.log("");
+    await getHouses();
+  } catch (error) {
+    console.log("Error: ", error);
+    await getHouses();
+  }
+}
+
+// Fetch Harry Potter Houses
+async function getHouses() {
+  const url = "https://hp-api.onrender.com/api/houses";
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log(data);
+    await getSpells();
+  } catch (error) {
+    console.log(error);
+    console.log("");
+    await getSpells();
+  }
+}
+
+// Fetch Harry Potter Spells
+async function getSpells() {
+  const url = "https://hp-api.onrender.com/api/spells";
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    // console.log(response);
+    const data = await response.json();
+    // console.log(data);
+    console.log("Spells From Harry Potter");
+    data.slice(0, 10).forEach((element) => {
+      console.log(element.name);
+    });
+    console.log("");
+    await getRickAndMortyCharacter();
+  } catch (error) {
+    console.log("Error: ", error);
+    await getRickAndMortyCharacter();
+  }
+}
+
+// Fetch Rick and Morty Character's
+async function getRickAndMortyCharacter() {
+  const url = "https://rickandmortyapi.com/api/character";
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      console.log(`HTTP error! Status: ${response.status}`);
+    }
+    console.log("Character's From Rick and Morty");
+    const data = await response.json();
+    // console.log(data.results);
+    data.results.slice(0, 6).forEach((element) => {
+      console.log(element.name);
+    });
+    console.log("");
+    await getRickAndMortyLocation();
+  } catch (error) {
+    console.log("Error: ", error);
+    await getRickAndMortyLocation();
+  }
+}
+
+// Get Rick and Morty Location
+async function getRickAndMortyLocation() {
+  const url = "https://rickandmortyapi.com/api/location";
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: , ${response.status}`);
+    }
+    const data = await response.json();
+
+    const maxNameLength =
+      Math.max(...data.results.map((loc) => loc.name.length)) + 2;
+    // console.log(data);
+    console.log("Locations from Rick and Morty");
+    data.results.slice(0, 9).forEach((element) => {
+      const name = element.name.padEnd(maxNameLength);
+      const type = element.type;
+      console.log(`Location Name : ${name} Location Type: ${type}`);
+      //   console.log("Location Name :",element.name," Location Type :", element.type);
+    });
+    console.log("");
+    await getRickAndMortyEpisode();
+  } catch (error) {
+    console.log(error);
+    await getRickAndMortyEpisode();
+  }
+}
+
+// Get Rick and Morty Episode
+async function getRickAndMortyEpisode() {
+  const url = "https://rickandmortyapi.com/api/episode";
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: , ${response.status}`);
+    }
+    const data = await response.json();
+    console.log("Episodes for Rick and Morty:");
+    // console.log(data);
+
+    const nameMaxLength = Math.max(
+      ...data.results.map((element) => element.name.length)
+    );
+
+    data.results.slice(0, 6).forEach((element) => {
+      const name = element.name.padEnd(nameMaxLength);
+      const airDate = element.air_date;
+
+      console.log(`Episode Name : ${name} Episode Air Date : ${airDate}`);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
